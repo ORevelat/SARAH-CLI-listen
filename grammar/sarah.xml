@@ -1,0 +1,18 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleNoWildcard" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+
+	<rule id="ruleNoWildcard" scope="public">
+		<tag>out.action = new Object(); </tag>
+
+		<item>
+			<ruleref uri="#ruleMain" />
+			<tag>out.action = rules.latest();</tag>
+		</item>
+	</rule>
+
+	<rule id="ruleMain" scope="public">
+		<item weight="1">Sarah</item>
+		<tag>out.context = "wildcard";</tag>
+		<tag>out.mode = "WILDCARD";</tag>
+	</rule>
+
+</grammar>

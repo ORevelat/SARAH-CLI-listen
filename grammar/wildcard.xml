@@ -1,0 +1,17 @@
+﻿<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="lazyruleWildcard" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+
+	<rule id="lazyruleWildcard" scope="public">
+		<tag>out.action = new Object(); </tag>
+
+		<item>
+			<ruleref uri="#ruleMain" />
+			<tag>out.action = rules.latest();</tag>
+		</item>
+	</rule>
+
+	<rule id="ruleMain" scope="public">
+		<ruleref special="GARBAGE" />
+		<tag>out.mode = "GARBAGE";</tag>
+	</rule>
+
+</grammar>
